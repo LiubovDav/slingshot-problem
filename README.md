@@ -22,7 +22,9 @@ For example:
 ]
 ```
 
-Auberon is only able to shoot their slingshot up, down, left, or right. They cannot shoot at a diagonal. Their pellet travels until it either hits a target, a wall, or exits the room. The pellet cannot pass through walls or targets.
+Auberon is only able to shoot their slingshot up, down, left, or right. They cannot shoot at a diagonal.
+
+Their pellet travels until it either hits a target, a wall, or exits the room. The pellet cannot pass through walls or targets.
 
 In this example, Auberon is able to hit two targets: one above them (row 0, column 1), and one to the right of them (row 2, column 3).
 

@@ -1,6 +1,47 @@
 def hittable_targets(room):
     # Your implementation here!
-    pass
+    count = 0
+
+    row = -1
+    column = -1
+
+
+    for i in range(len(room)):
+        for j in range(len(room[i])):
+            if room[i][j] == "A":
+                row = i
+                column = j
+
+    for i in reversed(range(0, column)):
+        if room[row][i] == "T":
+            count += 1
+            break
+        elif room[row][i] == "W":
+            break
+
+    for i in range(column, len(room[0])):
+        if room[row][i] == "T":
+            count += 1
+            break
+        elif room[row][i] == "W":
+            break
+    
+    for i in reversed(range(0, row)):
+        if room[i][column] == "T":
+            count += 1
+            break
+        elif room[i][column] == "W":
+            break
+    
+    for i in range(row, len(room)):
+        if room[i][column] == "T":
+            count += 1
+            break
+        elif room[i][column] == "W":
+            break
+
+    return count
+    
 
 
 room1 = [
@@ -11,6 +52,7 @@ room1 = [
     ['W', 'W', 'W', ' ', ' '],
     [' ', 'T', ' ', ' ', ' '],
 ]
+
 assert hittable_targets(room1) == 2
 
 room2 = [
